@@ -1,0 +1,201 @@
+body{
+    background-color: none;
+    background-image: linear-gradient(to left, #001b2e 567.5px, white 567.5px 1540px, #001b2e 1540px 100%);
+    /* background-image: linear-gradient(to left, #f5f5f5 639.5px, white 639.5px 1611px, #f5f5f5 1611px 100%); */
+}
+
+.introduction{
+    width: 100vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #001b2ef5;
+}
+
+.textboxtest{
+    position: relative;
+    width: 50%;
+    background-color: #f5f5f5;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    aspect-ratio: 2/1;
+}
+.textboxtest::after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -5%;
+    height: 20%;
+    aspect-ratio: 1/1;
+    background-color: #f5f5f5;
+    rotate: 45deg;
+    box-shadow: 20px -20px 20px rgba(0, 0, 0, 0.2);
+}
+.profile{
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: url(images/home/Sif-Fig.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 30vw;
+}
+.page_title_header{
+    position: sticky;
+    overflow: hidden;
+    padding: 0px;
+    height: calc(100vh - 200px);
+}
+.skewed_backdrop{
+    z-index: 2;
+    
+    transform: skew(30deg,355deg);
+    position: absolute;
+    bottom:-100px;
+    right: 800px;
+    width: 925px;
+    height: 925px;
+    padding: 25px;
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+.skewed_gallery{
+    z-index: 3;
+    transform: skew(30deg,355deg);
+    position: absolute;
+    bottom:-100px;
+    right: 800px;
+    
+    
+    animation-name: slide;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+
+    display: grid;
+    grid-template-columns: repeat(8,87.5px);
+    gap: 25px;
+
+    padding: 25px;
+}
+@keyframes slide {
+    0% {transform:skew(30deg,355deg)translateY(1000px)};
+    75% {transform:skew(30deg,355deg)translateY(-1100px)};
+}
+.skewed_gallery>img{
+    height: 200px;
+    transition: .75s ease;
+    object-fit: cover;
+}
+.skewed_gallery>img:hover{
+    transform: translateY(-10px) translateX(10px);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.skewed_square{
+    grid-column: span 2;
+}
+.skewed_landscape{
+    grid-column: span 4;
+}
+.skewed_portrait{
+    grid-column: span 1;
+}
+.page_title_header_text{
+    z-index: 1;
+    
+    position: absolute; 
+    top: calc((100vh - 200px)/2); 
+    right: -50px;
+    transform: skew(30deg,355deg);
+    width: 150%;
+}
+.page_title_header_text>.pretext{
+    color: white;
+    margin-bottom: -10px;
+    padding-right: 100px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+
+    
+    animation-name: paragraph_slide;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+.page_title_header_text>.maintext{
+    color: white;
+    margin-bottom: -10px;
+    padding-right: 100px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+    
+    animation-name: h2_slide;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+.page_title_header_text>.subheader{
+    
+    color: white;
+    margin-bottom: -10px;
+    padding-right: 220px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    
+    animation-name: subheader_slide;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+.subheader>:nth-child(1){
+    padding-right:10px;
+
+    will-change: transform;
+    animation: subheader_expand 1.5s ease-out 2.5s 1 normal both;
+}
+.subheader>:nth-child(2){
+    padding-right:10px;
+
+    will-change: transform;
+    animation: subheader_expand 1.5s ease-out 3.5s 1 normal both;
+}
+.subheader>:nth-child(3){
+    padding-right:7.5px;
+
+    will-change: transform;
+    animation: subheader_expand 1.5s ease-out 4.5s 1 normal both;
+}
+
+@keyframes paragraph_slide {
+    0% {margin-right: 100%;}
+    75% {margin-right: -15px;}
+    100% {margin-right: 0%};
+}
+@keyframes h2_slide {
+    0% {margin-right: 150%;}
+    75% {margin-right: -10px;}
+    100% {margin-right: 0%};
+}
+@keyframes subheader_slide {
+    0% {margin-right: 200%;}
+    75% {margin-right: -5px;}
+    100% {margin-right: 0%};
+}
+@keyframes subheader_expand {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+@media screen and (max-width:850px) {
+    .introduction{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+}

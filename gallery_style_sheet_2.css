@@ -1,0 +1,324 @@
+/* Gallery Layout */
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+      "one one three three three two two"
+      "one one three three three two two"
+      "sixteen sixteen sixteen eleven eleven two two"
+      "sixteen sixteen sixteen  eleven eleven five five"
+      "seven seven eight eight eight  five five "
+      "seven seven  eight eight eight  twelve twelve"
+      "seven seven ten ten ten twelve twelve "
+      "fourteen fourteen ten ten ten twelve twelve"
+      "fourteen fourteen nine nine  fifteen fifteen fifteen"
+      "six six nine nine fifteen fifteen fifteen "
+      "six six thirteen thirteen thirteen four four "
+      "six six thirteen thirteen thirteen four four "
+      "12 12 12 . . . ."
+      "12 12 12 . . . .";
+    margin-top: 50px;
+  }
+  .moc:nth-child(1) {
+    grid-area: one;
+  }
+  .moc:nth-child(2) {
+    grid-area: two;
+  }
+  .moc:nth-child(3) {
+    grid-area: three;
+  }
+  .moc:nth-child(4) {
+    grid-area: four;
+  }
+  .moc:nth-child(5) {
+    grid-area: five;
+  }
+  .moc:nth-child(6) {
+    grid-area: six;
+  }
+  .moc:nth-child(7) {
+    grid-area: seven;
+  }
+  .moc:nth-child(8) {
+    grid-area: eight;
+  }
+  .moc:nth-child(9) {
+    grid-area: nine;
+  }
+  .moc:nth-child(10) {
+    grid-area: ten;
+  }
+  .moc:nth-child(11) {
+    grid-area: eleven;
+  }
+  .moc:nth-child(12) {
+    grid-area: twelve;
+  }
+  .moc:nth-child(13) {
+    grid-area: thirteen;
+  }
+  .moc:nth-child(14) {
+    grid-area: fourteen;
+  }
+  .moc:nth-child(15) {
+    grid-area: fifteen;
+  }
+  .moc:nth-child(16) {
+    grid-area: sixteen;
+  }
+  
+  /* Portfolio Header Animation */
+  
+  @keyframes breathing {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .symbol_key_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 75%;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+    gap: 10px;
+    justify-items: center;
+  }
+  @media screen and (max-width: 1050px) {
+    .symbol_key_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* MOC Cards */
+  
+  .moc {
+    transition: 0.5s ease-in-out;
+    background-size: cover;
+  }
+  .moc:hover .moc_button_background {
+    backdrop-filter: saturate(50%) blur(2px);
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+  }
+  
+  /* MOC Card Sizings */
+  
+  .square {
+    aspect-ratio: 1/1;
+  }
+  .landscape {
+    aspect-ratio: 3/2;
+  }
+  .portrait {
+    aspect-ratio: 2/3;
+  }
+  
+  /* MOC Card Buttons. Appear on Hover. */
+  
+  .moc_button_background {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .moc_button_box {
+    aspect-ratio: 1/1;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .square > .moc_button_background > .moc_button_box {
+    width: 50%;
+  }
+  .portrait > .moc_button_background > .moc_button_box {
+    width: 50%;
+  }
+  .landscape > .moc_button_background > .moc_button_box {
+    height: 50%;
+  }
+  .moc:hover .moc_button_box {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+  .moc_button {
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #272932e6;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 20px #272932e6;
+  }
+  
+  .button_link {
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin-left: 25%;
+    transition: 0.6s ease-in-out;
+  }
+  .button_with_link {
+    background-color: #3a90f8e6;
+    transition: 0.6s ease-in-out;
+  }
+  .button_with_link:hover {
+    transform: scale(1.1);
+    background-color: #0653b1;
+    transition: 0.4s ease-in-out;
+  }
+  .button_with_link:hover .button_link {
+    transform: scale(1.2);
+    transition: 0.4s ease-in-out;
+  }
+  
+  /* MOC Card Backgrounds */
+  .charlie {
+    background-image: url(images/charlie.jpg);
+    background-position: center;
+    /* grid-area:one; */
+  }
+  .christmas {
+    background-image: url(images/christmas.jpg);
+    background-position: center;
+    /* grid-area:three; */
+  }
+  .gali {
+    background-image: url(images/gali.jpg);
+    background-position: center;
+    /* grid-area:four; */
+  }
+  .cottage {
+    background-image: url(images/cottage.jpg);
+    background-position: right;
+  }
+  .desk {
+    background-image: url(images/desk.jpg);
+    background-position: center;
+  }
+  .k2 {
+    background-image: url(images/k2.jpg);
+    background-position: center;
+  }
+  .cottage {
+    background-image: url(images/cottage.jpg);
+    background-position: right center;
+  }
+  .n1 {
+    background-image: url(images/n1.jpg);
+    background-position: left 18% center;
+  }
+  .raccoon {
+    background-image: url(images/raccoon.jpg);
+    background-position: center;
+  }
+  .xwing {
+    background-image: url(images/xwing.jpg);
+    background-position: center;
+  }
+  .detective {
+    background-image: url(images/detective.jpg);
+    background-position: center;
+  }
+  .franken {
+    background-image: url(images/franken.jpg);
+    background-position: top;
+  }
+  .dungeons {
+    background-image: url(images/dungeons.jpg);
+    background-position: center;
+  }
+  .duchess {
+    background-image: url(images/duchess.jpg);
+    background-position: left 40% center;
+  }
+  .knight {
+    background-image: url(images/knight.jpg);
+    background-position: right;
+  }
+  .nurse {
+    background-image: url(images/nurse.jpg);
+    background-position: center bottom 20%;
+  }
+  .ship {
+    background-image: url(images/ship.jpg);
+    background-position: center;
+  }
+  .furniture {
+    background-image: url(images/furniture.jpg);
+    background-position: center;
+  }
+  .goblin {
+    background-image: url(images/goblin.jpg);
+    background-position: left 80% center;
+    grid-area: five;
+  }
+  .house {
+    background-image: url(images/house.jpg);
+    background-position: left 60% center;
+    grid-area: two;
+  }
+  .judgement {
+    background-image: url(images/judgement.jpg);
+    background-position: left 40% center;
+  }
+  .mushroom {
+    background-image: url(images/mushroom.png);
+    background-position: left 53% center;
+  }
+  .quantum {
+    background-image: url(images/quantum.jpg);
+    background-position: center;
+  }
+  .winter {
+    background-image: url(images/winter.png);
+    background-position: left 25% center;
+  }
+  
+  /* Change Gallery To 1 Picture Wide for Smaller Screens */
+  @media screen and (max-width: 1200px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "seven"
+        "eleven"
+        "fourteen"
+        "eight"
+        "six"
+        "five"
+        "nine"
+        "fifteen"
+        "ten"
+        "four"
+        "twelve"
+        "thirteen"
+        "sixteen";
+    }
+    :is(.landscape, .portrait, .square)
+      > .moc_button_background
+      > .moc_button_box {
+      height: 25vw;
+      width: 25vw;
+      min-width: 120px;
+      min-height: 120px;
+    }
+  }
+  

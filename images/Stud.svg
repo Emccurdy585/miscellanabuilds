@@ -1,0 +1,25 @@
+<svg id="Stud" xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M23.814,94.176V140.63c28.388,24.087,58,44.226,86.387,68.313,40.863-16.775,80.5-29.6,121.365-46.377V116.113L145.11,45.142Z" transform="translate(-2.687 -2.063)"/>
+  <path class="cls-2" d="M23.814,94.176l89.036,67.1L231.566,117.4" transform="translate(-2.687 -2.063)"/>
+  <path class="cls-1" d="M127.69,79.982c25.3,0,45.808,11.843,45.808,26.453s-20.509,26.453-45.808,26.453-45.809-11.844-45.809-26.453S102.39,79.982,127.69,79.982Z" transform="translate(-2.687 -2.063)"/>
+  <path id="Line_1" data-name="Line 1" class="cls-2" d="M81.97,76.956h1.112v30.032H81.97V76.956Z" transform="translate(-2.687 -2.063)"/>
+  <path id="Line_2" data-name="Line 2" class="cls-2" d="M173.5,107.08h-1.29V72.24h1.29v34.84Z" transform="translate(-2.687 -2.063)"/>
+  <path class="cls-1" d="M127.69,50.3c25.3,0,45.808,11.843,45.808,26.453s-20.509,26.453-45.808,26.453S81.881,91.365,81.881,76.756,102.39,50.3,127.69,50.3Z" transform="translate(-2.687 -2.063)"/>
+</svg>

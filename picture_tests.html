@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 0%;
+            width: 500px;
+            background-color: black;
+            height: 250px;
+            display: grid;
+            gap:20px;
+            grid-template-columns: repeat(2,1fr);
+            border-radius: 10px;
+            transition: 1s ease;
+        }
+        .card:hover{
+            box-shadow: 100px 100px 0px -90px blue, -10px -10px blue;
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="images/pfp_test_3_black.png">
+    <link rel="stylesheet" href="portfolio_website_style_sheet.css">
+    <link rel="stylesheet" href="index_style_sheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<script src="portfolio_website_javascript.js"></script>
+
+<!-- Prevents animations from starting before assets load. From css-tricks.com -->
+<script> 
+    
+    document.body.classList.add('js-loading');
+
+    window.addEventListener("load", showPage);
+    
+    function showPage() {
+      document.body.classList.remove('js-loading');
+    }
+
+</script>
+
+<body>
+    <div class="header">
+        <h1>Eann McCurdy</h1>
+        <div class="logo"></div>
+        <h1>Miscellanabuilds</h1>
+    </div>
+    
+    <div class="menu">
+        <div class="tab_box large active home">
+            <a href="index.html" class="tab">Home</a>
+        </div>
+        <div class="tab_box large portfolio inactive">
+            <a href="gallery.html" class="tab ">Portfolio</a>
+        </div>
+        <div class="tab_box large projects inactive">
+            <a href="projects.html" class="tab ">Projects</a>
+        </div>
+        <div class="tab_box large resources inactive">
+            <a href="resources.html" class="tab ">Resources</a>
+        </div>
+        <div class="tab_box large about inactive">
+            <a href="about_me.html" class="tab ">About Me</a>
+        </div>
+        <div class="tab_box large contact inactive">
+            <a href="contacts_commissions.html" class="tab ">Contact & Commission</a>
+        </div>   
+    </div>
+
+    <div id="menu_thinscreen">
+        <i id="hamburger" class="material-icons menu_icon" onclick="dropdown_open()">expand_more</i>
+        <i id="close" class="material-icons menu_icon" onclick="dropdown_close()">expand_less</i>
+        <div class="tab_box small home">
+            <a href="index.html" class="tab">Home</a>
+        </div>
+        <div class="tab_box small portfolio">
+            <a href="gallery.html" class="tab">Portfolio</a>
+        </div>
+        <div class="tab_box small projects">
+            <a href="projects.html" class="tab">Projects</a>
+        </div>
+        <div class="tab_box small resources">
+            <a href="resources.html" class="tab">Resources</a>
+        </div>
+        <div class="tab_box small about">
+            <a href="about_me.html" class="tab">About Me</a>
+        </div>
+        <div class="tab_box small contact">
+            <a href="contacts_commissions.html" class="tab">Contact & Commission</a>
+        </div>   
+    </div>
+    <div class="page_title_header">
+        <div class="skewed_backdrop white">
+        </div>
+        <div class="skewed_gallery">
+            <img class="skewed_square" src="images/goblin.jpg">
+            <img class="skewed_landscape" src="images/christmas.jpg">
+            <img class="skewed_square" src="images/raccoon.jpg">
+            <img class="skewed_landscape" src="images/n1.jpg">
+            <img class="skewed_square" src="images/charlie.jpg">
+            <img class="skewed_square" src="images/mushroom.png">
+            <img class="skewed_square" src="images/duchess.jpg">
+            <img class="skewed_square" src="images/k2.jpg">
+            <img class="skewed_landscape" src="images/quantum.jpg">
+            <img class="skewed_square" src="images/gali.jpg">
+            <img class="skewed_landscape" src="images/furniture.jpg">
+            <img class="skewed_square" src="images/house.jpg">
+        </div>
+        <div class="page_title_header_text">
+            <p class="right_align blue pretext">This is</p>
+            <h2 class="right_align blue maintext">Miscellanabuilds</h2>
+            <div class="subheader black">
+                <p class="right_align white_text">Design.</p>
+                <p class="right_align white_text">Iterate.</p>
+                <p class="right_align white_text">Display.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="content"> -->
+        <div class="introduction">
+            <div class="textboxtest">
+                <h2 class="black_text">Welcome to my website!</h2>
+                <p>My name is Eann, or as you may know me, Miscellanabuilds. Glad you decided to give me a visit! Thre's plenty of cool stuff around here, from BTS Projects to a plethora of external resources. Let me give you a quick tour of the place...</p>
+            </div>
+            <div class="profile"></div>
+        </div>
+    <!-- </div> -->
+
+    </div>   
+
+    <div class="social_media_bar">
+        <div class="social_media_button">
+            <div class="social_media_circle"></div>
+            <a href="https://www.instagram.com/miscellanabuilds/" target="_blank"><img alt="" class="smlogo" src="images/instagram_logo.png"></a>
+        </div>
+        <div class="social_media_button">
+          <div class="social_media_circle"></div>
+          <a href="https://www.flickr.com/photos/184830682@N03/" target="_blank"><img alt="" class="smlogo" src="images/flickr_logo.png"></a>
+       </div>
+        <div class="social_media_button">
+            <div class="social_media_circle"></div>
+            <a href="https://rebrickable.com/users/Miscellanabuilds/" target="_blank"><img alt="" class="smlogo" src="images/rebrickable.svg"></a>
+        </div>
+    </div>
+</body>
+</html>
