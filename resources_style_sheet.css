@@ -1,5 +1,15 @@
 /* Page Section Animation */
+.page_section{
+  padding-bottom: 10px;
+}
 
+.page_section>.full_band{
+  padding: 50px;
+  transition: .75s ease;
+}
+.full_band > h2 {
+  transition: .75s ease;
+}
 .page_section:hover .full_band > h2 {
     transform: scale(1.05);
     text-shadow: #001b2e10 5px 5px 5px;
@@ -15,6 +25,7 @@
     align-content: center;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: .75s ease;
   }
   
   .resource_card:hover {
@@ -25,10 +36,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin: auto;
-    padding: 25px;
   }
   
   .card_title {
@@ -75,7 +85,7 @@
     grid-template-columns: repeat(5, 1fr);
     width: 75%;
     margin: auto;
-    padding: 20px 0px 20px 0px;
+    padding-top: 20px;
     gap: 10px;
     justify-items: center;
   }
@@ -307,4 +317,3 @@
       font-size: 9px;
     }
   }
-  
