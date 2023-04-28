@@ -18,7 +18,8 @@
       "six six thirteen thirteen thirteen four four "
       "12 12 12 . . . ."
       "12 12 12 . . . .";
-    margin-top: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
   .moc:nth-child(1) {
     grid-area: one;
@@ -87,7 +88,7 @@
     grid-template-columns: repeat(4, 1fr);
     width: 75%;
     margin: auto;
-    padding: 20px 0px 20px 0px;
+    padding-top: 20px;
     gap: 10px;
     justify-items: center;
   }
@@ -101,6 +102,7 @@
   .moc {
     transition: 0.5s ease-in-out;
     background-size: cover;
+    overflow: hidden;
   }
   .moc:hover .moc_button_background {
     backdrop-filter: saturate(50%) blur(2px);
@@ -188,25 +190,52 @@
   }
   
   /* MOC Card Backgrounds */
+
+  .moc:hover .moc_button_background::after{
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+    animation: text_dropdown 0.5s ease-in-out 0s 1 normal both;
+  }
+
+  @keyframes text_dropdown{
+    0%{transform: translateY(-100%);}
+    100%{transform: translateY(10px);}
+  }
+
   .charlie {
     background-image: url(images/charlie.jpg);
     background-position: center;
     /* grid-area:one; */
   }
+
+  .charlie:hover .moc_button_background::after{
+    content: "The Knight";
+  }
+
   .christmas {
     background-image: url(images/christmas.jpg);
     background-position: center;
     /* grid-area:three; */
   }
+
+  .christmas:hover .moc_button_background::after{
+    content: "Twas The Night Before Christmas";
+  }
+
   .gali {
     background-image: url(images/gali.jpg);
     background-position: center;
     /* grid-area:four; */
   }
-  .cottage {
-    background-image: url(images/cottage.jpg);
-    background-position: right;
+
+  .gali:hover .moc_button_background::after{
+    content: "Gali";
   }
+
+
+
   .desk {
     background-image: url(images/desk.jpg);
     background-position: center;
@@ -215,13 +244,27 @@
     background-image: url(images/k2.jpg);
     background-position: center;
   }
+
+  .k2:hover .moc_button_background::after{
+    content: "K-2SO";
+  }
+
   .cottage {
     background-image: url(images/cottage.jpg);
     background-position: right center;
   }
+
+  .cottage:hover .moc_button_background::after{
+    content: "Gnome Cottage";
+  }
+
   .n1 {
     background-image: url(images/n1.jpg);
     background-position: left 18% center;
+  }
+
+  .n1:hover .moc_button_background::after{
+    content: "N1 Starfighter";
   }
   .raccoon {
     background-image: url(images/raccoon.jpg);
@@ -321,4 +364,3 @@
       min-height: 120px;
     }
   }
-  
