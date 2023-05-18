@@ -190,18 +190,15 @@
   }
   
   /* MOC Card Backgrounds */
-
-  .moc:hover .moc_button_background::after{
+  .moc_title{
     position: absolute;
     top: 0;
     left: 10px;
-
-    animation: text_dropdown 0.5s ease-in-out 0s 1 normal both;
+    transform: translateY(-100%);
+    transition: 0.5s ease-in-out;
   }
-
-  @keyframes text_dropdown{
-    0%{transform: translateY(-100%);}
-    100%{transform: translateY(10px);}
+  .moc:hover .moc_title{
+    transform: translateY(10px);
   }
 
   .charlie {
@@ -210,31 +207,18 @@
     /* grid-area:one; */
   }
 
-  .charlie:hover .moc_button_background::after{
-    content: "The Knight";
-  }
-
   .christmas {
     background-image: url(images/christmas.jpg);
     background-position: center;
     /* grid-area:three; */
   }
 
-  .christmas:hover .moc_button_background::after{
-    content: "Twas The Night Before Christmas";
-  }
 
   .gali {
     background-image: url(images/gali.jpg);
     background-position: center;
     /* grid-area:four; */
   }
-
-  .gali:hover .moc_button_background::after{
-    content: "Gali";
-  }
-
-
 
   .desk {
     background-image: url(images/desk.jpg);
@@ -245,17 +229,9 @@
     background-position: center;
   }
 
-  .k2:hover .moc_button_background::after{
-    content: "K-2SO";
-  }
-
   .cottage {
     background-image: url(images/cottage.jpg);
     background-position: right center;
-  }
-
-  .cottage:hover .moc_button_background::after{
-    content: "Gnome Cottage";
   }
 
   .n1 {
@@ -263,9 +239,6 @@
     background-position: left 18% center;
   }
 
-  .n1:hover .moc_button_background::after{
-    content: "N1 Starfighter";
-  }
   .raccoon {
     background-image: url(images/raccoon.jpg);
     background-position: center;
@@ -363,4 +336,11 @@
       min-width: 120px;
       min-height: 120px;
     }
+  }
+  @media only screen and (max-width: 520px){
+  .symbol_key_box {
+      width: 90px;
+      padding: 5px;
+      align-items: center;
+  }
   }

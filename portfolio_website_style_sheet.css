@@ -116,7 +116,7 @@
     text-align: center;
   }
   .logo {
-    height: 80%;
+    height: 5vw;
     aspect-ratio: 1/1;
     /* border-radius: 50%; */
     /* background-color: #9DC7FB; */
@@ -139,21 +139,16 @@
     background-color: #001b2e;
     box-shadow: 0px 5px 5px #001b2e60;
   }
-  .active {
-    background-color: #3a90f8;
-  }
+
   #menu_thinscreen {
     display: none;
     height: 50px;
     width: 100%;
-    /* border-bottom: 3px solid #001B2E;
-          border-top: 3px solid #001B2E; */
     position: sticky;
     z-index: 100;
     top: 0%;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: #ECF7FD; */
     background-color: #001b2e;
     box-shadow: 0px 5px 5px #001b2e60;
   }
@@ -202,7 +197,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  :is(.inactive, .small):hover {
+  :is(.large, .small):hover {
     transition: 0.5s ease;
     transform: scale(1.3);
     transition: 0.75s ease; 
@@ -268,7 +263,7 @@
     aspect-ratio: 1/1;
     position: absolute;
     top: 0%;
-    left: 0%;
+    left: 200px;
     border-radius: 50%;
     transform: translate(-50%, 0%);
   } 
@@ -279,7 +274,7 @@
     aspect-ratio: 1/1;
     position: absolute;
     top: 0%;
-    left: 1695px;
+    left: 1895px;
     border-radius: 50%;
     transform: translate(-50%, 0%);
   } 
@@ -293,7 +288,7 @@
     aspect-ratio: 1/1;
     position: absolute;
     bottom: 0%;
-    left: 847px;
+    left: 1047px;
     border-radius: 50%;
     transform: translate(-50%, 0%);
   } 
@@ -314,6 +309,8 @@
     grid-column: span 1;
     transition: 0.75s ease;
     transition: 0.75s ease; 
+    will-change: transform;
+    align-items: center;
   }
   .symbol_key_box:hover {
     transform: scale(1.1);
@@ -352,13 +349,18 @@
   /*Content, may change from page-to-page*/
   
   .content {
-    display: relative;
+    position: relative;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 2vw;
     padding-left: 15%;
     padding-right: 15%;
     overflow-x: hidden;
     transition: 1s ease all;
+  }
+  .content_divider{
+    width: 100%;
+    height: 6px;
+    background-image: linear-gradient(135deg, #001b2e 0% 5%, #3a90f8 5% 7%, #001b2e 7% 8%, #3a90f8 8% 10%, #001b2e 10% 11%, #3a90f8 11% 13%,  #001b2e 13% 100%);
   }
   .full_band {
     width: 100%;
@@ -433,7 +435,94 @@
       padding-left: 7%;
       padding-right: 7%;
     }
+    .logo{
+      display: none;
+    }
+    .jump{
+      display: none;
+    }
+
   }
+
+  .page_footer_banner{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .page_footer_banner.white_circle{
+    background-color: white;
+    margin-top: 250px;
+  }
+  .page_footer_banner.white_circle::after{
+    content: "";
+    background-color: #ffb140;
+    width: 6000px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0%;
+    right: 200px;
+    border-radius: 50%;
+    transform: translate(-50%, 0%);
+  } 
+  .page_footer_banner.white_circle::before{
+    content: "";
+    background-color: #ffb140;
+    width: 6000px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0%;
+    right: 1895px;
+    border-radius: 50%;
+    transform: translate(-50%, 0%);
+  } 
+  .page_footer_banner.orange_circle{
+    background-color: #ffb140;
+  }
+  .page_footer_banner.orange_circle::after{
+    content: "";
+    background-color: white;
+    width: 6000px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: 0%;
+    right: 1047px;
+    border-radius: 50%;
+    transform: translate(-50%, 0%);
+  } 
+
+  .page_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #ffb140;
+    height: 250px;
+    padding: 50px;
+  }
+  .footer_header{
+    color: white;
+    font-size: 1em;
+    text-align: left;
+  }
+  .footer_list{
+    list-style-type: none;
+    padding-right: 25px;
+  }
+  .footer_list> li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Jost-Regular;
+    text-transform: uppercase;
+  }
+  .jump{
+    text-align: center;
+    text-decoration: none;
+  }
+  .jump > p{
+    color: white;
+  }
+
   @media screen and (max-width: 835px) {
     .social_media_bar {
       display: none;
@@ -449,3 +538,4 @@
     }
     
   }
+  
